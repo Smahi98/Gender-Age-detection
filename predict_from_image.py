@@ -40,7 +40,7 @@ def read_from_image(image=cv2.imread('ronaldo.jpg')):
         age = age_list[age_preds[0].argmax()]
         print("Age Range: " + age)
         overlay_text = "%s %s" % (gender, age)
-        cv2.putText(image, overlay_text, (x, y), font, 2, (100, 100, 255), 2, cv2.LINE_AA)
+        cv2.putText(image, overlay_text, (x, y+h), font, 2, (100, 100, 255), 2, cv2.LINE_AA)
 
     return image
 
